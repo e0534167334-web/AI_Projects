@@ -2,7 +2,7 @@
 :root { --ink:#16233A; --tchelet:#23457A; --brass:#A67C2D; --mist:#DDE6EE; --paper:#EEF2F5; --sheet:#FBFCFD; --muted:#566478; }
 html, body, .stApp, [data-testid="stMarkdownContainer"], textarea, button { font-family:'Assistant',sans-serif; }
 /* RTL רק על התוכן: RTL על שורש האפליקציה שובר את פתיחת הסרגל הצדדי במובייל */
-.block-container, [data-testid="stSidebarContent"], [data-testid="stBottom"] { direction:rtl; }
+.block-container, [data-testid="stSidebarContent"], [data-testid="stBottom"], [data-testid="stDialog"] [role="dialog"] { direction:rtl; }
 [data-testid="stMarkdownContainer"] p, [data-testid="stMarkdownContainer"] li { text-align:right; }
 textarea { direction:rtl; text-align:right; }
 .block-container { max-width:760px; padding-top:3.2rem; padding-bottom:7rem; }
@@ -33,3 +33,11 @@ header[data-testid="stHeader"] { background:transparent; }
 .chunk b { color:var(--tchelet); }
 [data-testid="stExpander"] [data-testid="stMarkdownContainer"] p { font-family:'Assistant',sans-serif !important; font-size:1rem !important; line-height:1.5 !important; }
 @media (prefers-reduced-motion: reduce) { * { transition:none !important; animation:none !important; } }
+
+[data-testid="stSidebar"] .stButton button[kind="tertiary"] { border:0; border-bottom:1px solid #C3D1DE; border-radius:0; min-height:2.4rem; justify-content:flex-start; color:var(--ink); }
+[data-testid="stSidebar"] .stButton button[kind="tertiary"]:hover { background:transparent; color:var(--tchelet); text-decoration:underline; }
+[data-testid="stSidebar"] .stButton button[kind="tertiary"] p { text-align:right; }
+[data-testid="stDialog"] [data-testid="stMarkdownContainer"] { text-align:right; }
+[data-testid="stDialog"] h1 { font-family:'Frank Ruhl Libre',serif; color:var(--tchelet); }
+[data-testid="stDialog"] table { direction:rtl; }
+[data-testid="stSidebar"] .stButton button[kind="tertiary"] > div { width:100%; justify-content:flex-start; }
